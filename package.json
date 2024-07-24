@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "serve": "http-server"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "typescript": "^5.5.4"
+  }
+}

@@ -1,2 +1,2 @@
-# my-stacking-tree
-Calculating stacking levels in HTML with Alfa
+# My Stacking Context
+My implementation of stacking context in HTML using Alfa.
