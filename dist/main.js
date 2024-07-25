@@ -1,8 +1,8 @@
 import { Device } from "@siteimprove/alfa-device";
 import { Element, Node } from "@siteimprove/alfa-dom";
 import { Style } from "@siteimprove/alfa-style";
-import { Native as DomNative } from "./node_modules/@siteimprove/alfa-dom/dist/native.js";
-import { Native as DeviceNative } from "./node_modules/@siteimprove/alfa-device/dist/native.js";
+import { Native as DomNative } from "../node_modules/@siteimprove/alfa-dom/dist/native.js";
+import { Native as DeviceNative } from "../node_modules/@siteimprove/alfa-device/dist/native.js";
 import { StackingContext } from "./stacking-context.js";
 const device = Device.from(DeviceNative.fromWindow(window));
 const alfaDocument = Node.from(await DomNative.fromNode(window.document));
