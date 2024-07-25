@@ -1,8 +1,14 @@
 {
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "serve": "http-server"
+  },
+  "dependencies": {
+    "@siteimprove/alfa-device": "^0.86.2",
+    "@siteimprove/alfa-dom": "^0.86.2",
+    "@siteimprove/alfa-style": "^0.86.2"
   },
   "devDependencies": {
     "http-server": "^14.1.1",

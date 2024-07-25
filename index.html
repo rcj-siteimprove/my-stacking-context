@@ -2,7 +2,96 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>My Stacking:</title>
+    <title>My Stacking Context</title>
+    <style>
+      #blue-box {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background: blue;
+      }
+
+      #yellow-box {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: 75px;
+        z-index: 1;
+        background: yellow;
+      }
+
+      #red-box {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background: red;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div id="blue-box">
+      <div id="yellow-box"></div>
+    </div>
+
+    <div id="red-box"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "@siteimprove/alfa-applicative": "./node_modules/@siteimprove/alfa-applicative/dist/index.js",
+          "@siteimprove/alfa-array": "./node_modules/@siteimprove/alfa-array/dist/index.js",
+          "@siteimprove/alfa-bits": "./node_modules/@siteimprove/alfa-bits/dist/index.js",
+          "@siteimprove/alfa-cache": "./node_modules/@siteimprove/alfa-cache/dist/index.js",
+          "@siteimprove/alfa-callback": "./node_modules/@siteimprove/alfa-callback/dist/index.js",
+          "@siteimprove/alfa-cascade": "./node_modules/@siteimprove/alfa-cascade/dist/index.js",
+          "@siteimprove/alfa-clone": "./node_modules/@siteimprove/alfa-clone/dist/index.js",
+          "@siteimprove/alfa-collection": "./node_modules/@siteimprove/alfa-collection/dist/index.js",
+          "@siteimprove/alfa-comparable": "./node_modules/@siteimprove/alfa-comparable/dist/index.js",
+          "@siteimprove/alfa-css": "./node_modules/@siteimprove/alfa-css/dist/index.js",
+          "@siteimprove/alfa-css-feature": "./node_modules/@siteimprove/alfa-css-feature/dist/index.js",
+          "@siteimprove/alfa-device": "./node_modules/@siteimprove/alfa-device/dist/index.js",
+          "@siteimprove/alfa-dom": "./node_modules/@siteimprove/alfa-dom/dist/index.js",
+          "@siteimprove/alfa-earl": "./node_modules/@siteimprove/alfa-earl/dist/index.js",
+          "@siteimprove/alfa-either": "./node_modules/@siteimprove/alfa-either/dist/index.js",
+          "@siteimprove/alfa-encoding": "./node_modules/@siteimprove/alfa-encoding/dist/index.js",
+          "@siteimprove/alfa-equatable": "./node_modules/@siteimprove/alfa-equatable/dist/index.js",
+          "@siteimprove/alfa-flags": "./node_modules/@siteimprove/alfa-flags/dist/index.js",
+          "@siteimprove/alfa-fnv": "./node_modules/@siteimprove/alfa-fnv/dist/index.js",
+          "@siteimprove/alfa-foldable": "./node_modules/@siteimprove/alfa-foldable/dist/index.js",
+          "@siteimprove/alfa-functor": "./node_modules/@siteimprove/alfa-functor/dist/index.js",
+          "@siteimprove/alfa-hash": "./node_modules/@siteimprove/alfa-hash/dist/index.js",
+          "@siteimprove/alfa-iterable": "./node_modules/@siteimprove/alfa-iterable/dist/index.js",
+          "@siteimprove/alfa-json": "./node_modules/@siteimprove/alfa-json/dist/index.js",
+          "@siteimprove/alfa-json-ld": "./node_modules/@siteimprove/alfa-json-ld/dist/index.js",
+          "@siteimprove/alfa-lazy": "./node_modules/@siteimprove/alfa-lazy/dist/index.js",
+          "@siteimprove/alfa-list": "./node_modules/@siteimprove/alfa-list/dist/index.js",
+          "@siteimprove/alfa-map": "./node_modules/@siteimprove/alfa-map/dist/index.js",
+          "@siteimprove/alfa-mapper": "./node_modules/@siteimprove/alfa-mapper/dist/index.js",
+          "@siteimprove/alfa-math": "./node_modules/@siteimprove/alfa-math/dist/index.js",
+          "@siteimprove/alfa-monad": "./node_modules/@siteimprove/alfa-monad/dist/index.js",
+          "@siteimprove/alfa-option": "./node_modules/@siteimprove/alfa-option/dist/index.js",
+          "@siteimprove/alfa-parser": "./node_modules/@siteimprove/alfa-parser/dist/index.js",
+          "@siteimprove/alfa-predicate": "./node_modules/@siteimprove/alfa-predicate/dist/index.js",
+          "@siteimprove/alfa-record": "./node_modules/@siteimprove/alfa-record/dist/index.js",
+          "@siteimprove/alfa-rectangle": "./node_modules/@siteimprove/alfa-rectangle/dist/index.js",
+          "@siteimprove/alfa-reducer": "./node_modules/@siteimprove/alfa-reducer/dist/index.js",
+          "@siteimprove/alfa-refinement": "./node_modules/@siteimprove/alfa-refinement/dist/index.js",
+          "@siteimprove/alfa-result": "./node_modules/@siteimprove/alfa-result/dist/index.js",
+          "@siteimprove/alfa-sarif": "./node_modules/@siteimprove/alfa-sarif/dist/index.js",
+          "@siteimprove/alfa-selective": "./node_modules/@siteimprove/alfa-selective/dist/index.js",
+          "@siteimprove/alfa-selector": "./node_modules/@siteimprove/alfa-selector/dist/index.js",
+          "@siteimprove/alfa-sequence": "./node_modules/@siteimprove/alfa-sequence/dist/index.js",
+          "@siteimprove/alfa-set": "./node_modules/@siteimprove/alfa-set/dist/index.js",
+          "@siteimprove/alfa-slice": "./node_modules/@siteimprove/alfa-slice/dist/index.js",
+          "@siteimprove/alfa-string": "./node_modules/@siteimprove/alfa-string/dist/index.js",
+          "@siteimprove/alfa-style": "./node_modules/@siteimprove/alfa-style/dist/index.js",
+          "@siteimprove/alfa-thunk": "./node_modules/@siteimprove/alfa-thunk/dist/index.js",
+          "@siteimprove/alfa-trampoline": "./node_modules/@siteimprove/alfa-trampoline/dist/index.js",
+          "@siteimprove/alfa-tree": "./node_modules/@siteimprove/alfa-tree/dist/index.js",
+          "@siteimprove/alfa-trilean": "./node_modules/@siteimprove/alfa-trilean/dist/index.js"
+        }
+      }
+    </script>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
